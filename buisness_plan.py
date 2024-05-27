@@ -8,7 +8,7 @@ from tqdm import tqdm
 #persone0 = argent non récupérable, person1 = type de partie, person2 = argentRetirable
 
 #créer la population de joueur
-nb_joueur = 10000
+nb_joueur = 1000
 pop = np.zeros((nb_joueur,3))
 
 sum_trans = 0
@@ -39,15 +39,15 @@ def init ():
                     argent = 50 - person[0]
                     person[2] -= argent
                     person[0] += argent
-                    person[1] = 2
+                person[1] = 2
             elif niveau >= 10:
                 if person[0] < 20:
                     argent = 20 - person[0]
                     person[2] -= argent
                     person[0] += argent
-                    person[1] = 0
+                person[1] = 0
             else:
-                person[1] = 1
+                person[1] = 0
         elif person[0]+person[2] >= 20 :
             niveau = random.randint(0,50)
             if niveau > 30:
@@ -55,7 +55,7 @@ def init ():
                     argent = 20 - person[0]
                     person[2] -= argent
                     person[0] += argent
-                    person[1] = 1
+                person[1] = 1
             else:
                 person[1] = 0
         else :
@@ -170,7 +170,7 @@ def jeu ():
 init () #initialiser la population
 for i in tqdm(range(100)):
     jeu ()
-    frais = sum_trans * 5 / 100
+    frais = sum_trans * 2.5 / 100
     reste = gain_casino - frais
     reste1.append(reste)
 for person in pop:
