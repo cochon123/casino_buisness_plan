@@ -1,0 +1,30 @@
+une population de 1000 joueur vont joué au jeu. 
+
+chaqun aura 50% de chance de joué au niveau facile, 30% de joué au niveau moyen et 20% de joué au niveau difficile
+en fonction de ses moyens (je n'ai pas réussi a mettre exactement ces probabilité)
+
+a chaque fois que 3 joueur déciderons de joué facile un d'entre eux aura la gain joueur (chaqun parie 10 pour gagner 25)
+a chaque fois que 6 joueur déciderons de joué moyen un d'entre eux aura la gain joueur (chaqun parie 20 pour gagner 100)
+a chaque fois que 10 joueur déciderons de joué dificile un d'entre eux aura la gain joueur (chaqun parie 50 pour gagner 400)
+
+a chaque itération on notera gainCasino
+chaque joueur vera son argent ajouté de 10dollars a chaque itération pour simuler l'entrer d'argent des joueurs.
+
+des frais de 2.5% seront appliqué à chaque transaction. (à chaque fois que de l'argent entre ou sort du jeu)
+chaque fois qu'un joueur gagne il pourra retirée une partie de son argent et reparier une autre. il laissera minimum 10 dollars dans son compte.
+
+un joueur sera caractérisé par :
+- argent non récupérable
+- argent 
+- type de partie (change a chaque itération entre facile moyen et difficile)
+
+problème : quel somme d'argent le casino pedra avec des frais de 2.5%
+
+pour résoudre le problème ma stratégie est la suivante:
+- calculer le gain du casino sans frais,
+- calculer la somme total des transaction,
+- ainsi le vrai gainCasino = gainCasino(sans frais) - sommetransaction * 5% 
+NB 
+5% car l'orsque un joueur met de l'argent dans le jeu 2.5% s'applique,
+toutes les transactions qu'il fait à l'intérieur du jeu ne subissent pas de frais
+quand le joueur retire de l'argent du jeu des frais de 2.5% s'applique ce qui font 5%
