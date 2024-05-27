@@ -24,7 +24,18 @@ pour résoudre le problème ma stratégie est la suivante:
 - calculer le gain du casino sans frais,
 - calculer la somme total des transaction,
 - ainsi le vrai gainCasino = gainCasino(sans frais) - sommetransaction * 5% 
+- chaque joueur va joué un certains nombre de fois (100) et a chaque fois que des joueurs ne 
+trouverons pas avec qui joué il seront juste éliminé et ramplacer par de nouveau au prochain tour 
 NB 
 5% car l'orsque un joueur met de l'argent dans le jeu 2.5% s'applique,
 toutes les transactions qu'il fait à l'intérieur du jeu ne subissent pas de frais
 quand le joueur retire de l'argent du jeu des frais de 2.5% s'applique ce qui font 5%
+
+
+
+
+
+
+
+
+https://github.com/cochon123/casino_buisness_plan.git
